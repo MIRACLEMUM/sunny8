@@ -1,12 +1,97 @@
 #header {
-    background-color:#2196f3;
+    background-image: linear-gradient(RED,BLUE,YELLOW);
     background-repeat: no repeat;
     background-position: center;
     color: white;
-    margin: 20px;
-    padding: 20px;
+    margin: 30px;
+    padding: 10px;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 
+}
+
+input[type=text],[type=tel],[type=password],select{
+    width: 50%;
+    padding: 12PX 20PX;
+    margin: 8px O;
+    display: inline-block;
+    border: 1PX solid #CCC;
+    box-sizing: border-box;
+}
+
+input [type=submit]{
+    width: 20%;
+    background-color: blue;
+    color: white;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+body{
+    background-color: #afac43;
+}
+
+input[type=reset]{
+    width:20% ;
+    background-color: #afac4c;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-inline-start: 135px;
+}
+input[type=submit]:hover{
+    background-color: #afac43;
+}
+/*the radiobutton */
+.radiobutton{
+    display: inline;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    padding-inline-end: 20px;
+
+
+}
+/*Hide the browsers defult radio button */
+.radiobutton input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/*create a custom radio button is checked,add a blue background */
+.selected {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+    border: solid 1px #ccc
+}
+/*mouse-over,and grey background color*/
+.radiobutton:hover input .selected{
+    background-color: #2196f3;
+}
+
+/* create the indicator(the dot/circle-hidden when not checked )*/
+.selected:after{
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* show the indicator(dot/circle)when checked */
+.radiobutton input:checked .selected::after {
+    display: inline;
 }
